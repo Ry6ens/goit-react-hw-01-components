@@ -1,3 +1,5 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Button } from 'react-bootstrap';
 import Profile from './components/Profile';
 import Statistics from './components/Statistics';
 import FriendList from './components/FriendList';
@@ -6,12 +8,17 @@ import users from './users.json';
 import statisticalData from './statistical-data.json';
 import friends from './friends.json';
 import transaction from './transactions.json';
+import styles from './components/css/Profile.module.css';
+import styles_stat from './components/css/Statistics.module.css';
 
 export default function App() {
   return (
     <div>
-      <section className="profile">
-        <h2 class="title">Задание 1 - Профиль социальной сети</h2>
+      <section className={styles.profile_section}>
+        <h2 className={styles.title}>Задание 1 - Профиль социальной сети</h2>
+        {/* <Button variant="outline-danger" size="lg">
+          Danger
+        </Button>{' '} */}
         {users.map(user => (
           <Profile
             key={user.id}
@@ -24,18 +31,20 @@ export default function App() {
         ))}
       </section>
 
-      <section class="statistics">
-        <h2 class="title">Задание 2 - Секция статистики</h2>
-        <h3 class="title">Upload Stats</h3>
-        <ul class="stat-list">
-          {statisticalData.map(el => (
-            <Statistics label={el.label} percentage={el.percentage} />
-          ))}
-        </ul>
+      <section className={styles_stat.stats_statistics}>
+        <h2 className={styles.title}>Задание 2 - Секция статистики</h2>
+        <div className={styles_stat.stats_frame}>
+          <h3 className={styles_stat.stats_title}>Upload Stats</h3>
+          <ul className={styles_stat.stats_list}>
+            {statisticalData.map(el => (
+              <Statistics label={el.label} percentage={el.percentage} />
+            ))}
+          </ul>
+        </div>
       </section>
 
       <section class="friends">
-        <h2 class="title">Задание 3 - Список друзей</h2>
+        <h2 className={styles.title}>Задание 3 - Список друзей</h2>
         <ul class="friend-list">
           {friends.map(el => (
             <FriendList
@@ -48,7 +57,7 @@ export default function App() {
       </section>
 
       <section>
-        <h2 class="title">Задание 4 - История транзакций</h2>
+        <h2 className={styles.title}>Задание 4 - История транзакций</h2>
         <table class="transaction-history">
           <thead>
             <tr>

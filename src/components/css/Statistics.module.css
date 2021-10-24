@@ -1,0 +1,32 @@
+.flex-rw {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stats_statistics {
+  composes: flex-rw;
+}
+
+.stats_frame {
+  composes: flex-rw;
+  border: 1px solid lightgray;
+}
+.stats_title {
+  padding: 20px 20px;
+  text-transform: uppercase;
+}
+
+.stats_list {
+  display: flex;
+  width: inherit;
+  background-color: rgb(238, 238, 238);
+}
+
+.stats_item {
+  composes: flex-rw;
+  padding: 10px 10px;
+  width: 100px;
+  border: 0.5px solid gray;
+  background-color: tomato;
+}
