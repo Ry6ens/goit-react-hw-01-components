@@ -17,9 +17,6 @@ export default function App() {
     <div>
       <section className={styles.profile_section}>
         <h2 className={styles.title}>Задание 1 - Профиль социальной сети</h2>
-        {/* <Button variant="outline-danger" size="lg">
-          Danger
-        </Button>{' '} */}
         {users.map(user => (
           <Profile
             key={user.id}
