@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import { Button } from 'react-bootstrap';
 import Profile from './components/Profile';
 import Statistics from './components/Statistics';
 import FriendList from './components/FriendList';
