@@ -4,8 +4,8 @@ import styles_stat from './css/Statistics.module.css';
 export default function Statistics({ label, percentage }) {
   return (
     <li className={styles_stat.stats_item}>
-      <span class="label">{label}</span>
-      <span class="percentage">{percentage}</span>
+      <span className={styles_stat.stats_label}>{label}</span>
+      <span className={styles_stat.stats_percentage}>{percentage}</span>
     </li>
   );
 }

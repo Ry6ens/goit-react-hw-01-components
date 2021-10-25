@@ -10,6 +10,8 @@ import friends from './friends.json';
 import transaction from './transactions.json';
 import styles from './components/css/Profile.module.css';
 import styles_stat from './components/css/Statistics.module.css';
+import styles_friend from './components/css/FriendList.module.css';
+import styles_trans from './components/css/TransactionHistory.module.css';
 
 export default function App() {
   return (
@@ -31,23 +33,28 @@ export default function App() {
         ))}
       </section>
 
-      <section className={styles_stat.stats_statistics}>
+      <section className={styles.profile_section}>
         <h2 className={styles.title}>Задание 2 - Секция статистики</h2>
         <div className={styles_stat.stats_frame}>
           <h3 className={styles_stat.stats_title}>Upload Stats</h3>
           <ul className={styles_stat.stats_list}>
             {statisticalData.map(el => (
-              <Statistics label={el.label} percentage={el.percentage} />
+              <Statistics
+                key={el.id}
+                label={el.label}
+                percentage={el.percentage}
+              />
             ))}
           </ul>
         </div>
       </section>
 
-      <section class="friends">
+      <section className={styles.profile_section}>
         <h2 className={styles.title}>Задание 3 - Список друзей</h2>
-        <ul class="friend-list">
+        <ul className={styles_friend.friend_list}>
           {friends.map(el => (
             <FriendList
+              key={el.id}
               isOnline={el.isOnline}
               avatar={el.avatar}
               name={el.name}
@@ -56,10 +63,10 @@ export default function App() {
         </ul>
       </section>
 
-      <section>
+      <section className={styles.profile_section}>
         <h2 className={styles.title}>Задание 4 - История транзакций</h2>
-        <table class="transaction-history">
-          <thead>
+        <table className={styles_trans.trans_history}>
+          <thead className={styles_trans.trans_title}>
             <tr>
               <th>Type</th>
               <th>Amount</th>
@@ -69,6 +76,7 @@ export default function App() {
           <tbody>
             {transaction.map(el => (
               <TransactionHistory
+                key={el.id}
                 type={el.type}
                 amount={el.amount}
                 currency={el.currency}

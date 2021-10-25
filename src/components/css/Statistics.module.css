@@ -12,6 +12,7 @@
   composes: flex-rw;
   border: 1px solid lightgray;
 }
+
 .stats_title {
   padding: 20px 20px;
   text-transform: uppercase;
@@ -29,4 +30,8 @@
   width: 100px;
   border: 0.5px solid gray;
   background-color: tomato;
+}
+.stats_label,
+.stats_percentage {
+  color: white;
 }
