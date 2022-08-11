@@ -14,7 +14,7 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
             width="100px"
           />
           <p className={s.name}>{username}</p>
-          <p className="tag">@{tag}</p>
+          <p className="tag">{tag}</p>
           <p className="location">{location}</p>
         </div>
 
