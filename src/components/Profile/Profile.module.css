@@ -1,0 +1,38 @@
+.profile {
+  width: 270px;
+  text-align: center;
+  margin: 0 auto;
+
+  border: 1px solid grey;
+}
+
+.description {
+  padding: 10px;
+  text-align: center;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3,90px);
+
+  background-color: #e9e3e3;
+  border-top: 1px solid grey;
+}
+
+.item {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  flex-direction: column;
+  border-right: 1px solid grey;
+
+}
+
+.item:last-child {
+  border: none
+}
