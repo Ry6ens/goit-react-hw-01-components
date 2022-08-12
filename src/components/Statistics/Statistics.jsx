@@ -30,6 +30,11 @@ const Statistics = ({ title, stats }) => {
 
 export default Statistics;
 
+Statistics.defaultProps = {
+  title: '',
+  stats: [],
+};
+
 Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(

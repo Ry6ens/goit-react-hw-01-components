@@ -30,6 +30,10 @@ const Transactions = ({ items }) => {
 
 export default Transactions;
 
+Transactions.defaultProps = {
+  items: [],
+};
+
 Transactions.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
