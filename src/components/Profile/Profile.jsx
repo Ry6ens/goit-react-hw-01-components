@@ -33,14 +33,12 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
 export default Profile;
 
 Profile.propTypes = {
-  username: PropTypes.string,
-  tag: PropTypes.string,
-  location: PropTypes.string,
-  stats: PropTypes.arrayOf(
-    PropTypes.shape({
-      followers: PropTypes.number,
-      views: PropTypes.number,
-      likes: PropTypes.number,
-    })
-  ),
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
 };
